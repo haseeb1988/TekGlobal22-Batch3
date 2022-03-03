@@ -127,8 +127,7 @@ public class ArraylistDemonstration {
         System.out.println(" ================= Dynamic solution=================");
         int[] a;
         a = new int[5];
-
-
+        
         Studentworking w = new Studentworking();
         w.displayStudentinfo();
 
