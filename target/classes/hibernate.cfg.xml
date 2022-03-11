@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 5.3//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-5.3.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hibernate.hbm2ddl.auto"> update </property>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/userdb</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">password</property>
+        <!-- Maria DB dialect -->
+        <property name="dialect">org.hibernate.dialect.MariaDB53Dialect</property>
+        <!-- Echo all executed SQL to stdout -->
+        <property name="hibernate.show_sql" >false </property>
+        <property name="hibernate.format_sql" >false </property>
+
+        <!--   Mapping entity file -->
+        <mapping class="com.test.hib.model.User"/>
+        <mapping class="com.test.hib.model.Employee"/>
+
+    </session-factory>
+</hibernate-configuration>
